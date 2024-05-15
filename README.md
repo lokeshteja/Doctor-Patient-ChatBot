@@ -9,7 +9,7 @@ This project involves developing a healthcare chatbot using an open-source large
 - `mistral-chat-doctor-finetune/checkpoint-500`: Directory to save model checkpoints.
 - `healthcare_llm`: Directory to save model checkpoints.
 - `evaluation`: Directory to save evaluation results.
-- 'Lokesh477/healthcare_llm': Hugging Face Repository of the developed model.
+- 'Lokesh477/healthcare_llm': Hugging Face Repository of the fine tuned model.
 
 ## Prerequisites
 Ensure you have the following installed:
