@@ -60,7 +60,7 @@ I evaluated the model using BLEU, ROUGE, and METEOR scores to assess the quality
 
 ## Usage
 
-After training and evaluation, the model can be used to generate responses to medical queries. The responses can be accessed through a user-friendly interface built with Gradio.
+The fine-tuned model can be used to generate responses to medical queries through a user-friendly interface built with Gradio.
 
 
 
