@@ -34,34 +34,38 @@ pip install -r requirements.txt
 
 ## Summary of Approach and Challenges
 
-## Dataset
+### Dataset
 
-I used the ChatDoctor-HealthCareMagic-100k dataset, containing around 110K+ rows of patient queries and doctor responses. For this project, I sampled 5000 rows for training and evaluation.
+I used the ChatDoctor-HealthCareMagic-100k dataset, containing around 110K+ rows of patient queries and doctor responses. For this project due to the limited GPU capability, I sampled 5000 rows for fine-tuning the model.
 
-## Formatting and Tokenizing
+### Formatting and Tokenizing
 
 I formatted the dataset into a specific structure to be fed into the LLM and tokenized it using Huggingface’s `AutoTokenizer`. The input format includes patient queries and doctor responses, with padding tokens added to the beginning of the sequence.
 
-## Model Initialization with QLoRA
+### Model Initialization with QLoRA
 
-I used quantized low rank adaptation (QLoRA) to load the model in 4-bit mode, significantly reducing memory usage without sacrificing performance.
+I used quantized low-rank adaptation (QLoRA) to load the model in 4-bit mode, significantly reducing memory usage without sacrificing performance.
 
-## PEFT and LoRA Configuration
+### PEFT and LoRA Configuration
 
-Then further used Parameter Efficient Fine-Tuning (PEFT) and LoRA to freeze most of the model parameters and fine-tune a small subset. This allows efficient fine-tuning even with limited data and computational resources.
+Further, I used Parameter Efficient Fine-Tuning (PEFT) and LoRA to freeze most of the model parameters and fine-tune a small subset. This allows efficient fine-tuning even with limited data and computational resources.
 
-## Training
+### Training
 
-I trained the model for 500 steps, saving checkpoints along the way.
+I trained the model for 500 steps, saving checkpoints along the way. This helps in restarting the fine-tuning process of the model from the point it stops. 
 
-## Evaluation
+### Evaluation
 
-I evaluated the model using BLEU, ROUGE, and METEOR scores to assess the quality of the generated responses compared to the reference answers.
+I initially attempted to perform the evaluation using the "lm evaluation harness," but due to compatibility issues with my environment, I was unable to execute it successfully. Consequently, I evaluated the model by computing BLEU, ROUGE, and METEOR scores and comparing them to the responses provided in the "truthful_qa" reference dataset from Hugging Face.
 
-## Usage
+### Usage
 
-The fine-tuned model can be used to generate responses to medical queries through a user-friendly interface built with Gradio.
+The final fine-tuned model can be used to generate responses to medical queries through a user-friendly interface built with Gradio.
 
+#### Challenges
+Due to a shortage of storage space and GPU accessibility, a small dataset was used for the model. Bigger datasets and computational capabilities can lead to better models. 
+The model can be evaluated in a better way if a standard Patient-Doctor chat dataset is created due to its high relevancy.
+Could not perform a model evaluation using the "lm evaluation harness," but due to compatibility issues with my environment. 
 
 
 ## Example Queries for the Chatbot
