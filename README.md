@@ -1,4 +1,4 @@
-# Healthcare Chatbot Development
+# Doctor-Patient ChatBot
 
 ## Overview
 This project involves developing a healthcare chatbot using the open-source large language model: mistralai/Mistral-7B-v0.1). The chatbot is fine-tuned on a healthcare dataset (lavita/ChatDoctor-HealthCareMagic-100k) and responds to user queries. The project includes data preprocessing, model fine-tuning, chatbot interface development, and performance evaluation.
