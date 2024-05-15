@@ -4,16 +4,15 @@
 This project involves developing a healthcare chatbot using an open-source large language model (LLM). The chatbot is fine-tuned on a healthcare dataset and responds to user queries. The project includes data preprocessing, model fine-tuning, chatbot interface development, and performance evaluation.
 
 ## Project Structure
-- `preprocessing.py`: Script for data preprocessing.
-- `fine_tuning.py`: Script for fine-tuning the LLM.
-- `evaluation.py`: Script for evaluating the model's performance.
-- `interface.py`: Script for the chatbot interface.
+- `medical_chat.py`: Main script of the project
 - `requirements.txt`: List of dependencies.
-- `output_dir`: Directory to save model checkpoints and evaluation results.
+- `mistral-chat-doctor-finetune/checkpoint-500`: Directory to save model checkpoints.
+- `healthcare_llm`: Directory to save model checkpoints.
+- `evaluation`: Directory to save evaluation results.
 
 ## Prerequisites
 Ensure you have the following installed:
-- Python 3.7 or higher
+- Python 3.10 or higher
 - PyTorch
 - Transformers library from Hugging Face
 - Datasets library from Hugging Face
