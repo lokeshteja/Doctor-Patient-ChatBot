@@ -7,7 +7,7 @@ This project involves developing a healthcare chatbot using the open-source larg
 - `medical_chat.ipynb`: Main script of the project
 - `requirements.txt`: List of dependencies.
 - `mistral-chat-doctor-finetune/checkpoint-500`: Directory to save model checkpoints.
-- `evaluation`: Directory to save evaluation results.
+- `evaluation_metrics.txt`: File to save evaluation results.
 
 ## Prerequisites
 Ensure you have the following installed:
