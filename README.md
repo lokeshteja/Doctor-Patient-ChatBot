@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 ### Dataset
 
-I used the ChatDoctor-HealthCareMagic-100k dataset, containing around 110K+ rows of patient queries and doctor responses. For this project due to the limited GPU capability, I sampled 5000 rows for fine-tuning the model.
+I used the ChatDoctor-HealthCareMagic-100k dataset, containing around 110K+ rows of patient queries and doctor responses. For this project due to the limited GPU capability, I sampled 50K rows for fine-tuning the model.
 
 ### Formatting and Tokenizing
 
